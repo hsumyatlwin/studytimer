@@ -1,0 +1,146 @@
+body {
+    background-color: darkolivegreen;
+    background-image: url('/BGimg/mainBgImg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+ 
+html, body {
+    height: 100%;
+}
+ 
+.timer-box {
+    width: 80%;
+    max-width: 600px;
+    padding: 30px 35px;
+    margin: 100px auto;
+ 
+    background: linear-gradient(135deg,
+        rgba(255,255,255,0.18),
+        rgba(0,0,0,0.30)
+    );
+    backdrop-filter: blur(10px);
+    border-radius: 22px;
+    border: 1px solid rgba(255,255,255,0.25);
+ 
+    box-shadow: 0 10px 28px rgba(0,0,0,0.25);
+ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+}
+ 
+.title {
+    color: white;
+    margin: 0;
+}
+ 
+.timer-display {
+    font-size: 48px;
+    font-weight: 800;
+    color: white;
+    letter-spacing: 2px;
+}
+ 
+.time-input {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    color: white;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+ 
+.time-input label {
+    font-size: 16px;
+    font-weight: 600;
+}
+ 
+.time-input input {
+    width: 70px;
+    padding: 8px 12px;
+    font-size: 16px;
+    font-weight: 600;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 6px;
+    background: rgba(255,255,255,0.15);
+    color: rgb(9, 89, 11);
+    text-align: center;
+    transition: all 0.2s ease;
+}
+ 
+.time-input input:focus {
+    outline: none;
+    border-color: rgba(255,255,255,0.6);
+    background: rgba(255,255,255,0.25);
+}
+ 
+.time-input input::placeholder {
+    color: rgba(255,255,255,0.6);
+}
+ 
+.time-input input::-webkit-outer-spin-button,
+.time-input input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+ 
+.time-input input[type=number] {
+    -moz-appearance: textfield;
+}
+ 
+.time-input button {
+    padding: 8px 16px;
+    font-size: 14px;
+}
+ 
+.buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+ 
+button {
+    font-size: 18px;
+    font-weight: 700;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background: linear-gradient(45deg, #ff4d4d, #4d79ff);
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+ 
+button:hover {
+    box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+}
+ 
+button:active {
+    transform: translateY(1px);
+}
+ 
+@media (max-width: 600px) {
+    .timer-box {
+        width: 90%;
+        padding: 20px 25px;
+        margin: 50px auto;
+    }
+    .timer-display {
+        font-size: 36px;
+    }
+    button {
+        font-size: 16px;
+        padding: 8px 14px;
+    }
+}

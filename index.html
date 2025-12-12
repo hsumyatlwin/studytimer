@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Timer</title>
+    <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="music.css">
+</head>
+<body>
+    <div class="timer-box">
+        <h1 class="title">Custom Timer</h1>
+        <div class="timer-display" id="timer">00:00</div>
+        <div class="time-input">
+            <label for="hoursInput">Hours:</label>
+            <input type="number" id="hoursInput" min="0" max="23" value="0" placeholder="0">
+            <label for="minutesInput">Minutes:</label>
+            <input type="number" id="minutesInput" min="0" max="59" value="25" placeholder="0">
+            <label for="secondsInput">Seconds:</label>
+            <input type="number" id="secondsInput" min="0" max="59" value="0" placeholder="0">
+            <button id="setBtn">Set Time</button>
+        </div>
+        <div class="buttons">
+            <button id="startBtn">Start</button>
+            <button id="pauseBtn">Pause</button>
+            <button id="resetBtn">Reset</button>
+        </div>
+        <div class="music-section">
+            <button id="musicBtn">🎵 Music</button>
+            <div id="musicPlayer" class="hidden">
+                <div class="now-playing" id="nowPlaying">Select a song to play</div>
+                
+                <div class="music-list">
+                    <h3>📂 Available Music</h3>
+                    <div class="music-item" data-src="audio/lofi1.mp3">
+                        <span class="music-icon">🎵</span>
+                        <span>Lofi Track 1</span>
+                    </div>
+                    <div class="music-item" data-src="audio/lofi2.mp3">
+                        <span class="music-icon">🎵</span>
+                        <span>Lofi Track 2</span>
+                    </div>
+                    <div class="music-item" data-src="audio/lofi3.mp3">
+                        <span class="music-icon">🎵</span>
+                        <span>Lofi Track 3</span>
+                    </div>
+                    <div class="music-item" data-src="audio/lofi4.mp3">
+                        <span class="music-icon">🎵</span>
+                        <span>Lofi Track 4</span>
+                    </div>
+                    <div class="music-item" data-src="audio/lofi5.mp3">
+                        <span class="music-icon">🎵</span>
+                        <span>Lofi Track 5</span>
+                    </div>
+                </div>
+                
+                <audio id="audioPlayer" controls loop>
+                    <source src="" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
